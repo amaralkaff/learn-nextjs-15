@@ -1,36 +1,162 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aplikasi Next.js Learning
 
-## Getting Started
+Aplikasi ini adalah proyek pembelajaran Next.js yang mendemonstrasikan fitur-fitur dasar dan routing di Next.js 15.
 
-First, run the development server:
+## Struktur Proyek
+
+```
+src/
+├── app/
+│   ├── about/
+│   │   └── page.tsx
+│   ├── dashboard/
+│   │   ├── jokes/
+│   │   │   ├── [id]/
+│   │   │   │   └── page.tsx
+│   │   │   ├── error.tsx
+│   │   │   ├── loading.tsx
+│   │   │   └── page.tsx
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   └── DashboardSidebar.tsx
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+public/
+├── globe.svg
+├── window.svg
+├── vercel.svg
+└── file.svg
+```
+
+## Fitur Utama
+
+- 🚀 **Next.js 15 dengan App Router**
+
+  - Implementasi routing modern
+  - Server dan Client Components
+  - Optimasi performa otomatis
+
+- 💅 **UI/UX Modern**
+
+  - Tailwind CSS untuk styling
+  - Responsif untuk semua ukuran layar
+  - Komponen yang dapat digunakan kembali
+
+- 🔄 **Fitur Next.js**
+  - Dynamic Routing (`/dashboard/jokes/[id]`)
+  - Loading States
+  - Error Handling
+  - Nested Layouts
+
+## Halaman dan Rute
+
+1. **Beranda** (`/`)
+
+   - Landing page sederhana
+   - Link navigasi ke About page
+   - Styling dengan Tailwind CSS
+
+2. **About** (`/about`)
+
+   - Halaman informasi tentang aplikasi
+
+3. **Dashboard** (`/dashboard`)
+
+   - Layout khusus dashboard
+   - Sidebar navigasi
+   - Area konten dinamis
+
+4. **Jokes Section** (`/dashboard/jokes`)
+   - Daftar jokes
+   - Detail jokes dengan dynamic routing
+   - Loading state dan error handling
+
+## Cara Penggunaan
+
+1. **Clone Repository**
+
+```bash
+git clone https://github.com/amaralkaff/learn-nextjs-15.git
+cd learn-nextjs-15
+```
+
+2. **Install Dependencies**
+
+```bash
+npm install
+# atau
+yarn install
+```
+
+3. **Jalankan Development Server**
 
 ```bash
 npm run dev
-# or
+# atau
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Buka Browser**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Kunjungi [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tech Stack
 
-## Learn More
+- ⚡️ **Next.js 15** - Framework React untuk produksi
+- 🎨 **Tailwind CSS** - Framework CSS utility-first
+- 📘 **TypeScript** - Superset JavaScript dengan type system
+- 🔄 **React** - Library UI JavaScript
 
-To learn more about Next.js, take a look at the following resources:
+## Pengembangan
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Gunakan `npm run build` untuk membuat versi production
+- Gunakan `npm run start` untuk menjalankan versi production
+- Gunakan `npm run lint` untuk menjalankan linter
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Git Setup dan Push
 
-## Deploy on Vercel
+1. **Inisialisasi Git**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+git init
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Tambahkan File ke Staging**
+
+```bash
+git add .
+```
+
+3. **Buat Commit Pertama**
+
+```bash
+git commit -m "Initial commit"
+```
+
+4. **Hubungkan dengan Repository Remote**
+
+```bash
+git remote add origin https://github.com/amaralkaff/learn-nextjs-15.git
+```
+
+5. **Ganti Branch ke Main**
+
+```bash
+git branch -M main
+```
+
+6. **Push ke GitHub**
+
+```bash
+git push -u origin main
+```
+
+## Kontribusi
+
+1. Fork repository
+2. Buat branch fitur (`git checkout -b fitur-baru`)
+3. Commit perubahan (`git commit -m 'Menambah fitur baru'`)
+4. Push ke branch (`git push origin fitur-baru`)
+5. Buat Pull Request
